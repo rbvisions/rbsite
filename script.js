@@ -13,4 +13,18 @@ if (countdown) {
     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
     const seconds = Math.floor((diff / 1000) % 60);
-    countdown.innerHTML
+    countdown.innerHTML = `${days} Tage ${hours} Std ${minutes} Min ${seconds} Sek`;
+  }
+  setInterval(updateCountdown, 1000);
+}
+
+// Passwort
+function checkPassword() {
+  const input = document.getElementById("password").value;
+  const message = document.getElementById("access-message");
+  if (input === "plotme001") {
+    message.innerHTML = "✅ Zugriff gewährt. Willkommen in der Akte.";
+  } else {
+    message.innerHTML = "❌ Falsches Passwort.";
+  }
+}
