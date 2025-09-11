@@ -6,4 +6,4 @@ Die Webseite der RB Studios
 Der Name RB Studios wurde aus diversen gründen in RB Visions geändert.
 Logos und Texte werden selbstverständlich geändert.
 Ich bitte um Vertändnis,
-## Benjamin Blanke, Creative Director RB Visions
+### Benjamin Blanke, Creative Director RB Visions
