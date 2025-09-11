@@ -6,47 +6,92 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #0f0f0f;
+  background: radial-gradient(circle at center, #0f0f0f, #000);
   color: #fff;
   line-height: 1.5;
   font-size: 15px;
+  overflow-x: hidden;
 }
 
-nav {
+/* === Navigation === */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 1.2rem;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-nav .logo-text {
-  font-size: 1.2rem;
-  font-weight: 600;
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: bold;
   color: #ff0055;
 }
 
-nav ul {
+.burger {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
   gap: 1rem;
 }
 
-nav a {
+.nav-links li a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-nav a:hover {
+.nav-links li a:hover {
   color: #ff0055;
 }
 
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+/* === Hero Logo === */
+.hero-logo {
+  width: 80px;
+  margin: 1rem auto;
+  display: block;
+  filter: drop-shadow(0 0 6px #ff0055);
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+
+/* === Sections === */
 .section {
   padding: 3rem 1.5rem;
   text-align: center;
@@ -72,6 +117,8 @@ p {
   font-weight: bold;
   box-shadow: 0 0 10px #ff0055;
   transition: background 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 .btn-primary:hover {
@@ -79,6 +126,7 @@ p {
   transform: scale(1.05);
 }
 
+/* === Flip Countdown === */
 .flip-container {
   display: flex;
   justify-content: center;
@@ -108,6 +156,7 @@ p {
   color: #ccc;
 }
 
+/* === Cards === */
 .feature-grid, .crew-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -120,15 +169,16 @@ p {
   border-radius: 8px;
   padding: 1rem;
   backdrop-filter: blur(6px);
-  box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
+  box-shadow: 0 0 10px rgba(255, 0, 85, 0.3);
   transition: transform 0.3s ease;
 }
 
 .card:hover, .feature-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(255, 0, 85, 0.4);
+  box-shadow: 0 0 15px rgba(255, 0, 85, 0.6);
 }
 
+/* === Form === */
 form {
   display: flex;
   flex-direction: column;
@@ -166,18 +216,15 @@ button:hover {
   background: #ff3366;
 }
 
+/* === Access Message === */
 #access-message {
   margin-top: 1rem;
   font-weight: bold;
   color: #ff0055;
 }
 
+/* === Responsive === */
 @media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
   .flip-unit {
     width: 60px;
     padding: 0.6rem;
