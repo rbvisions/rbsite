@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
-  color: #111;
+  background: #0f0f0f;
+  color: #f0f0f0;
 }
 nav {
   background: #111;
@@ -14,11 +14,9 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin: 0;
-  padding: 0;
 }
 nav a {
-  color: #fff;
+  color: #ff4c4c;
   text-decoration: none;
   font-weight: bold;
 }
@@ -27,19 +25,14 @@ nav a {
   margin: 3rem auto;
   text-align: center;
   padding: 2rem;
-  background: #fff;
-  border: 2px solid #111;
 }
 .logo {
-  width: 100px;
+  width: 120px;
   margin-bottom: 1rem;
 }
 .teaser {
   font-style: italic;
   margin-bottom: 2rem;
-}
-.info p {
-  margin: 0.5rem 0;
 }
 form {
   display: flex;
@@ -49,16 +42,16 @@ form {
 }
 input, textarea {
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: none;
   font-size: 1rem;
 }
 button {
-  background: #111;
-  color: #fff;
+  background: #ff4c4c;
+  color: white;
   border: none;
   padding: 1rem;
   cursor: pointer;
 }
 button:hover {
-  background: #333;
+  background: #ff1c1c;
 }
